@@ -14,3 +14,5 @@ const salary = 5000
 // else{
 //     console.log("Ele é Senior")
 // }
+
+salary < 3000 ?  console.log("O colaborador é Junior") : console.log("Ele é Senior")
