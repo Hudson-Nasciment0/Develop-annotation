@@ -25,44 +25,29 @@
 
 
 const cart = [10, 244, 99, 2, 20, 33, 250]
+let finalValueWithDiscount = 0
+const finalValue = 
 
-let finalWithValue = 0
-
-
-
-function calculetDiscount (price, discount){
-        const result = (price * discount) / 100
+function calculetDiscount(price, discount){
+        const result =  (price * discount) / 100
         return result
 }
-
 
 
 cart.forEach(value => {
 
         if(value > 30){
-                const discount = calculetDiscount (value, 10)
-                finalWithValue = finalWithValue + ( value - discount)
+                const discount = calculetDiscount(value, 10)
+                finalValueWithDiscount = finalValueWithDiscount + (value - discount)
         }else{
-                finalWithValue += finalWithValue
-             
+                finalValueWithDiscount += value
         }
-
-       
+        
+        
 });
-
-console.log(finalWithValue)
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(`O valor final da compra foi de : R$ ${finalValueWithDiscount}, 
+porém você teve desconto, irá pagar apenas R$ ${finalValueWithDiscount},
+você economizou ${finalValueWithDiscount}`)
 
 
 
